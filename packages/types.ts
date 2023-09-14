@@ -13,7 +13,7 @@ export const ANIMATIONS = [
 
 export type AxieStarter = 'pomodoro' | 'buba' | 'puffy'
 
-export declare type Animation = (typeof ANIMATIONS)[number]
+export type Animation = (typeof ANIMATIONS)[number]
 
 export type OutlinesProps = {
   color: string
@@ -22,7 +22,7 @@ export type OutlinesProps = {
 }
 
 export type AxieStarterProps = {
-  animation?: Animation
+  animation?: Animation | string
   timeScale?: number
   outline?: OutlinesProps
 }

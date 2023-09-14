@@ -1,6 +1,6 @@
 <div alt style="text-align: center;">
 	<picture>
-		<img alt="tldraw" src="./docs/assets/banner.png" />
+		<img src="./docs/assets/banner.png" />
 	</picture>
 </div>
 
