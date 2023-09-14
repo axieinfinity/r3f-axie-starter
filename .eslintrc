@@ -1,23 +1,40 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks", "simple-import-sort"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
     "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaFeatures": {
+      "tsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
+  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
+  "ignorePatterns": ["**/*.js"],
   "rules": {
-    "react/jsx-uses-vars": ["error"],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "quotes": ["error", "single", "avoid-escape"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-loss-of-precision": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "react/no-unknown-property": "off",
+    "react/no-unescaped-entities ": "off",
+    "no-unused-vars": "warn",
+    "no-duplicate-imports": "error",
+    "no-alert": "error",
     "no-trailing-spaces": ["error"],
     "no-console": ["warn", { "allow": ["warn", "error"] }],
     "comma-dangle": ["error", "always-multiline"],
@@ -32,12 +49,10 @@
     "space-infix-ops": ["error", { "int32Hint": false }],
     "space-before-blocks": ["warn"],
     "arrow-parens": ["warn"],
-    "react/jsx-key": "off",
-    "tailwindcss/no-custom-classname": "off",
-    "no-unused-vars": "warn",
-    "camelcase": "error",
-    "no-duplicate-imports": "error",
-    "no-alert": "error",
+
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+
     "padding-line-between-statements": [
       "error",
       {
@@ -54,6 +69,15 @@
         "blankLine": "any",
         "prev": ["const", "let", "var"],
         "next": ["const", "let", "var"]
+      }
+    ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
       }
     ]
   }

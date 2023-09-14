@@ -1,3 +1,23 @@
+node_modules/
+coverage/
+dist/
+build/
+types/
+storybook-static/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.vscode
+.docz/
+package-lock.json
+coverage/
+.idea
+yarn-error.log
+.size-snapshot.json
+__diff_output__
+
 # Logs
 logs
 *.log
@@ -6,7 +26,6 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data

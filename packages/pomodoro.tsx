@@ -4,7 +4,7 @@ import React, { useEffect, useMemo, useRef } from 'react'
 import * as THREE from 'three'
 import { GLTF, SkeletonUtils } from 'three-stdlib'
 
-// import ANIMATIONS_DATA from './axie-starter-animations.json'
+import { ANIMATIONS, BASE_URL } from './constants'
 import { AxieStarterProps } from './types'
 
 type GLTFResult = GLTF & {
@@ -56,19 +56,19 @@ type GLTFResult = GLTF & {
 
 export default function Pomodoro({
   outline = undefined,
-  // animation = 'idle',
+  animation = 'idle',
   timeScale = 1,
   ...props
 }: JSX.IntrinsicElements['group'] & AxieStarterProps) {
   const group = useRef<THREE.Group>(null)
 
-  const { scene, animations } = useGLTF('/raw/starter_pomodoro.glb')
+  const { scene, animations } = useGLTF(`${BASE_URL}starter_pomodoro.glb`)
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes } = useGraph(clone) as unknown as GLTFResult
 
-  const texture = useTexture('./textures/pomodoro_texture.jpg')
+  const texture = useTexture(`${BASE_URL}pomodoro_texture.jpg`)
 
-  // const animationData = useMemo(() => ANIMATIONS_DATA.pomodoro[animation], [animation])
+  const animationData = useMemo(() => ANIMATIONS.pomodoro[animation], [animation])
   const { mixer } = useAnimations(animations, group)
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export default function Pomodoro({
     texture.rotation = Math.PI
     texture.flipY = false
 
-    const clip = THREE.AnimationClip.parse({})
+    const clip = THREE.AnimationClip.parse(animationData)
     const action = new THREE.AnimationAction(mixer, clip, group.current)
 
     action.reset().fadeIn(0.2).play()
@@ -88,11 +88,10 @@ export default function Pomodoro({
     return () => {
       action.fadeOut(0.2)
     }
-  }, [texture, mixer])
+  }, [texture, mixer, animationData])
 
   useEffect(() => {
     mixer.timeScale = timeScale
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeScale])
 
   return (
@@ -153,114 +152,114 @@ export default function Pomodoro({
           </group>
         </group>
         <group name="SM_Mesh">
-          <skinnedMesh name="SM_Body" geometry={nodes.SM_Body.geometry} skeleton={nodes.SM_Body.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Body.geometry} name="SM_Body" skeleton={nodes.SM_Body.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Ear_R_1" geometry={nodes.SM_Ear_R_1.geometry} skeleton={nodes.SM_Ear_R_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Ear_R_1.geometry} name="SM_Ear_R_1" skeleton={nodes.SM_Ear_R_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Ear_L_1" geometry={nodes.SM_Ear_L_1.geometry} skeleton={nodes.SM_Ear_L_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Ear_L_1.geometry} name="SM_Ear_L_1" skeleton={nodes.SM_Ear_L_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Back_M_1" geometry={nodes.SM_Back_M_1.geometry} skeleton={nodes.SM_Back_M_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Back_M_1.geometry} name="SM_Back_M_1" skeleton={nodes.SM_Back_M_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Tail_M_1" geometry={nodes.SM_Tail_M_1.geometry} skeleton={nodes.SM_Tail_M_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Tail_M_1.geometry} name="SM_Tail_M_1" skeleton={nodes.SM_Tail_M_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Horn_R_1" geometry={nodes.SM_Horn_R_1.geometry} skeleton={nodes.SM_Horn_R_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Horn_R_1.geometry} name="SM_Horn_R_1" skeleton={nodes.SM_Horn_R_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Horn_L_1" geometry={nodes.SM_Horn_L_1.geometry} skeleton={nodes.SM_Horn_L_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Horn_L_1.geometry} name="SM_Horn_L_1" skeleton={nodes.SM_Horn_L_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Horn_T_1" geometry={nodes.SM_Horn_T_1.geometry} skeleton={nodes.SM_Horn_T_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Horn_T_1.geometry} name="SM_Horn_T_1" skeleton={nodes.SM_Horn_T_1.skeleton}>
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
                 angle={0}
-                thickness={outline.thickness}
                 color={outline.color}
-                screenspace={false}
                 opacity={outline.opacity}
+                screenspace={false}
+                thickness={outline.thickness}
                 transparent={false}
               />
             )}
           </skinnedMesh>
-          <skinnedMesh name="SM_Eye_M_1" geometry={nodes.SM_Eye_M_1.geometry} skeleton={nodes.SM_Eye_M_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Eye_M_1.geometry} name="SM_Eye_M_1" skeleton={nodes.SM_Eye_M_1.skeleton}>
             <meshStandardMaterial map={texture} />
           </skinnedMesh>
-          <skinnedMesh name="SM_Mouth_1" geometry={nodes.SM_Mouth_1.geometry} skeleton={nodes.SM_Mouth_1.skeleton}>
+          <skinnedMesh geometry={nodes.SM_Mouth_1.geometry} name="SM_Mouth_1" skeleton={nodes.SM_Mouth_1.skeleton}>
             <meshStandardMaterial map={texture} />
           </skinnedMesh>
         </group>
