@@ -1,0 +1,8 @@
+/build
+/dist
+/node_modules
+dist/*
+.cache
+public
+node_modules
+*.esm.js

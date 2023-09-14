@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDeclarationOnly": true,
+    "lib": ["DOM", "ESNext"],
+    "jsx": "react",
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true
+  },
+  "include": ["./packages", "./types"],
+  "exclude": ["node_modules"]
+}
