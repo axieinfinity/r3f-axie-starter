@@ -64,7 +64,9 @@ type AxieStarterProps = JSX.IntrinsicElements['group'] & {
     | 'walk'
     | 'walkattack'
     | 'walkcarryitem'
-  /** Scaling factor for the time. A value of 0 causes the animation to pause. Negative values cause the animation to play backwards. Default is 0.8   */
+  /** Scaling factor for the time. A value of 0 causes the animation
+   * to pause. Negative values cause the animation to play backwards.
+   * Default is 0.8   */
   timeScale?: number
 }
 ```
