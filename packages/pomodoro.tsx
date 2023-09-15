@@ -268,4 +268,4 @@ export default function Pomodoro({
   )
 }
 
-useGLTF.preload('/raw/starter_pomodoro.glb')
+useGLTF.preload(`${BASE_URL}starter_pomodoro.glb`)

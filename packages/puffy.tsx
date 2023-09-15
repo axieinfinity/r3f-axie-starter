@@ -246,4 +246,4 @@ export default function Puffy({
   )
 }
 
-useGLTF.preload('/raw/starter_puffy.glb')
+useGLTF.preload(`${BASE_URL}starter_puffy.glb`)

@@ -11,15 +11,30 @@ Create new adventure with Buba, Pomodoro, and Puffy using [@react-three/fiber](h
 ## Installation
 
 ```sh
-npm i @sms0nhaaa/r3f-axie-starter
+npm i @sms0nhaaa/r3f-axie-starter three-stdlib
 ```
 
 ```sh
-yarn add @sms0nhaaa/r3f-axie-starter
+yarn add @sms0nhaaa/r3f-axie-starter three-stdlib
 ```
 
 ```sh
-bun add @sms0nhaaa/r3f-axie-starter
+bun add @sms0nhaaa/r3f-axie-starter three-stdlib
+```
+
+Please make sure that your development server is running on port `3000`
+
+For anyone using `Vite`, update your `package.json`
+
+```json
+{
+  "scripts": {
+    "dev": "vite --port 5000",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+  // ...
+}
 ```
 
 ## Usage
@@ -61,19 +76,19 @@ import { Buba, Pomodoro, Puffy } from '@sms0nhaaa/r3f-axie-starter'
   animation="idle"
   outline={{ color: 'black', opacity: 1, thickness: 0.03 }}
   position={[0, 0, 0]}
-  timeScale={timeScale}
+  timeScale={1}
 />
 <Puffy
   animation="idle"
   outline={{ color: 'black', opacity: 1, thickness: 0.03 }}
   position={[2, 0, 0]}
-  timeScale={timeScale}
+  timeScale={1}
 />
 <Pomodoro
   animation="idle"
   outline={{ color: 'black', opacity: 1, thickness: 0.03 }}
   position={[-2, 0, 0]}
-  timeScale={timeScale}
+  timeScale={1}
 />
 ```
 
@@ -108,15 +123,15 @@ Would you like to customize the default import alias?  Yes
 #### 2. Install the dependencies
 
 ```bash
-npm i @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei
+npm i @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei three-stdlib
 ```
 
 ```bash
-yarn add @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei
+yarn add @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei three-stdlib
 ```
 
 ```bash
-bunx add @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei
+bun add @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei three-stdlib
 ```
 
 #### 3. Setup the scene
@@ -182,3 +197,5 @@ yarn dev
 ```bash
 bun dev
 ```
+
+Please make sure that your development server is running on port `3000`

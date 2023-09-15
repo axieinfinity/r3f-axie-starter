@@ -289,4 +289,4 @@ export default function Buba({
   )
 }
 
-useGLTF.preload('/raw/starter_buba.glb')
+useGLTF.preload(`${BASE_URL}starter_buba.glb`)

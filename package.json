@@ -1,6 +1,6 @@
 {
   "name": "@sms0nhaaa/r3f-axie-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Axie Starter: Buba, Pomodoro, and Puffy",
   "keywords": [
     "react-three-fiber",
@@ -22,7 +22,6 @@
     "build/**/*"
   ],
   "main": "build/index.cjs.js",
-  "module": "build/index.js",
   "types": "build/index.d.ts",
   "sideEffects": false,
   "commitlint": {
