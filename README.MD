@@ -29,7 +29,7 @@ For anyone using `Vite`, update your `package.json`
 ```json
 {
   "scripts": {
-    "dev": "vite --port 5000",
+    "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview"
   }
@@ -115,7 +115,7 @@ What is your project named?  axie-adventure
 Would you like to use TypeScript?  Yes
 Would you like to use ESLint?  Yes
 Would you like to use Tailwind CSS?  Yes
-Would you like to use `src/` directory?  Yes
+Would you like to use `src/` directory?  No
 Would you like to use App Router? (recommended)  Yes
 Would you like to customize the default import alias?  Yes
 ```

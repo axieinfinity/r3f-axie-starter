@@ -42,11 +42,11 @@ export default function Puffy({
 }: JSX.IntrinsicElements['group'] & AxieStarterProps) {
   const group = useRef<THREE.Group>(null)
 
-  const { scene, animations } = useGLTF(`${BASE_URL}starter_puffy.glb`)
+  const { scene, animations } = useGLTF(`${BASE_URL}models/starter_puffy.glb`)
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes } = useGraph(clone) as unknown as GLTFResult
 
-  const texture = useTexture(`${BASE_URL}puffy_texture.jpg`)
+  const texture = useTexture(`${BASE_URL}textures/puffy_texture.jpg`)
 
   const animationData = useMemo(() => ANIMATIONS.puffy[animation], [animation])
   const { mixer } = useAnimations(animations, group)
@@ -246,4 +246,4 @@ export default function Puffy({
   )
 }
 
-useGLTF.preload(`${BASE_URL}starter_puffy.glb`)
+useGLTF.preload(`${BASE_URL}models/starter_puffy.glb`)

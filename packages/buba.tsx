@@ -39,11 +39,11 @@ export default function Buba({
 }: JSX.IntrinsicElements['group'] & AxieStarterProps) {
   const group = useRef<THREE.Group>(null)
 
-  const { scene, animations } = useGLTF(`${BASE_URL}starter_buba.glb`)
+  const { scene, animations } = useGLTF(`${BASE_URL}models/starter_buba.glb`)
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes } = useGraph(clone) as unknown as GLTFResult
 
-  const texture = useTexture(`${BASE_URL}buba_texture.jpg`)
+  const texture = useTexture(`${BASE_URL}textures/buba_texture.jpg`)
 
   const animationData = useMemo(() => ANIMATIONS.buba[animation], [animation])
   const { mixer } = useAnimations(animations, group)
@@ -289,4 +289,4 @@ export default function Buba({
   )
 }
 
-useGLTF.preload(`${BASE_URL}starter_buba.glb`)
+useGLTF.preload(`${BASE_URL}models/starter_buba.glb`)

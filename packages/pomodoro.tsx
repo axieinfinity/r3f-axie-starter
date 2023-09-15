@@ -62,11 +62,11 @@ export default function Pomodoro({
 }: JSX.IntrinsicElements['group'] & AxieStarterProps) {
   const group = useRef<THREE.Group>(null)
 
-  const { scene, animations } = useGLTF(`${BASE_URL}starter_pomodoro.glb`)
+  const { scene, animations } = useGLTF(`${BASE_URL}models/starter_pomodoro.glb`)
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes } = useGraph(clone) as unknown as GLTFResult
 
-  const texture = useTexture(`${BASE_URL}pomodoro_texture.jpg`)
+  const texture = useTexture(`${BASE_URL}textures/pomodoro_texture.jpg`)
 
   const animationData = useMemo(() => ANIMATIONS.pomodoro[animation], [animation])
   const { mixer } = useAnimations(animations, group)
@@ -268,4 +268,4 @@ export default function Pomodoro({
   )
 }
 
-useGLTF.preload(`${BASE_URL}starter_pomodoro.glb`)
+useGLTF.preload(`${BASE_URL}models/starter_pomodoro.glb`)
