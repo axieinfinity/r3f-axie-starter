@@ -1,16 +1,22 @@
 {
-  "name": "@sonhaaa/r3f-axie-starter-test",
-  "version": "0.0.26",
-  "description": "Axie Starter: Buba, Pomodoro, Puffy",
+  "name": "@sms0nhaaa/r3f-axie-starter",
+  "version": "0.0.1",
+  "description": "Axie Starter: Buba, Pomodoro, and Puffy",
   "keywords": [
-    "react-three-fiber"
+    "react-three-fiber",
+    "axie-starter",
+    "axieinfinity"
   ],
   "maintainers": [
     "Son Ha Nguyen (https://github.com/sms0nhaaa)"
   ],
+  "homepage": "https://github.com/axieinfinity/r3f-axie-starter",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/axieinfinity/r3f-axie-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/axieinfinity/r3f-axie-starter/issues"
   },
   "files": [
     "build/**/*"

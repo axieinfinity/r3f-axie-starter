@@ -11,15 +11,15 @@ Create new adventure with Buba, Pomodoro, and Puffy using [@react-three/fiber](h
 ## Installation
 
 ```sh
-npm i @sonhaaa/r3f-axie-starter-test
+npm i @sms0nhaaa/r3f-axie-starter
 ```
 
 ```sh
-yarn add @sonhaaa/r3f-axie-starter-test
+yarn add @sms0nhaaa/r3f-axie-starter
 ```
 
 ```sh
-bun add @sonhaaa/r3f-axie-starter-test
+bun add @sms0nhaaa/r3f-axie-starter
 ```
 
 ## Usage
@@ -55,7 +55,7 @@ type AxieStarterProps = JSX.IntrinsicElements['group'] & {
 ```
 
 ```tsx
-import { Buba, Pomodoro, Puffy } from '@sonhaaa/r3f-axie-starter-test'
+import { Buba, Pomodoro, Puffy } from '@sms0nhaaa/r3f-axie-starter'
 
 <Buba
   animation="idle"
@@ -108,15 +108,15 @@ Would you like to customize the default import alias?  Yes
 #### 2. Install the dependencies
 
 ```bash
-npm i @sonhaaa/r3f-axie-starter-test three @react-three/fiber @react-three/drei
+npm i @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei
 ```
 
 ```bash
-yarn add @sonhaaa/r3f-axie-starter-test three @react-three/fiber @react-three/drei
+yarn add @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei
 ```
 
 ```bash
-bunx add @sonhaaa/r3f-axie-starter-test three @react-three/fiber @react-three/drei
+bunx add @sms0nhaaa/r3f-axie-starter three @react-three/fiber @react-three/drei
 ```
 
 #### 3. Setup the scene
@@ -127,7 +127,7 @@ bunx add @sonhaaa/r3f-axie-starter-test three @react-three/fiber @react-three/dr
 
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { Buba, Pomodoro, Puffy } from '@sonhaaa/r3f-axie-starter-test'
+import { Buba, Pomodoro, Puffy } from '@sms0nhaaa/r3f-axie-starter'
 
 export default function Home() {
   return (
