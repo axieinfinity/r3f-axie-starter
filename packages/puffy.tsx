@@ -156,7 +156,13 @@ export default function Puffy({
           </group>
         </group>
         <group name="SM_Mesh">
-          <skinnedMesh geometry={nodes.SM_Tail_M_1.geometry} name="SM_Tail_M_1" skeleton={nodes.SM_Tail_M_1.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Tail_M_1.geometry}
+            name="SM_Tail_M_1"
+            skeleton={nodes.SM_Tail_M_1.skeleton}
+          >
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
@@ -169,7 +175,13 @@ export default function Puffy({
               />
             )}
           </skinnedMesh>
-          <skinnedMesh geometry={nodes.SM_Back_M_1.geometry} name="SM_Back_M_1" skeleton={nodes.SM_Back_M_1.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Back_M_1.geometry}
+            name="SM_Back_M_1"
+            skeleton={nodes.SM_Back_M_1.skeleton}
+          >
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
@@ -182,7 +194,13 @@ export default function Puffy({
               />
             )}
           </skinnedMesh>
-          <skinnedMesh geometry={nodes.SM_Ear_R_1.geometry} name="SM_Ear_R_1" skeleton={nodes.SM_Ear_R_1.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Ear_R_1.geometry}
+            name="SM_Ear_R_1"
+            skeleton={nodes.SM_Ear_R_1.skeleton}
+          >
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
@@ -195,7 +213,13 @@ export default function Puffy({
               />
             )}
           </skinnedMesh>
-          <skinnedMesh geometry={nodes.SM_Ear_L_1.geometry} name="SM_Ear_L_1" skeleton={nodes.SM_Ear_L_1.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Ear_L_1.geometry}
+            name="SM_Ear_L_1"
+            skeleton={nodes.SM_Ear_L_1.skeleton}
+          >
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
@@ -208,7 +232,13 @@ export default function Puffy({
               />
             )}
           </skinnedMesh>
-          <skinnedMesh geometry={nodes.SM_Horn_M_1.geometry} name="SM_Horn_M_1" skeleton={nodes.SM_Horn_M_1.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Horn_M_1.geometry}
+            name="SM_Horn_M_1"
+            skeleton={nodes.SM_Horn_M_1.skeleton}
+          >
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
@@ -224,10 +254,22 @@ export default function Puffy({
           <skinnedMesh geometry={nodes.SM_Eye_M_1.geometry} name="SM_Eye_M_1" skeleton={nodes.SM_Eye_M_1.skeleton}>
             <meshStandardMaterial map={texture} />
           </skinnedMesh>
-          <skinnedMesh geometry={nodes.SM_Mouth_1.geometry} name="SM_Mouth_1" skeleton={nodes.SM_Mouth_1.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Mouth_1.geometry}
+            name="SM_Mouth_1"
+            skeleton={nodes.SM_Mouth_1.skeleton}
+          >
             <meshStandardMaterial map={texture} />
           </skinnedMesh>
-          <skinnedMesh geometry={nodes.SM_Body.geometry} name="SM_Body" skeleton={nodes.SM_Body.skeleton}>
+          <skinnedMesh
+            castShadow
+            receiveShadow
+            geometry={nodes.SM_Body.geometry}
+            name="SM_Body"
+            skeleton={nodes.SM_Body.skeleton}
+          >
             <meshStandardMaterial map={texture} />
             {outline && (
               <Outlines
